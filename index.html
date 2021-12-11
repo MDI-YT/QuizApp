@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="js/script.js"></script>
+    
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav class="flex items-center justify-between" >
+                    <div class = "branding">
+                        <div class="logo">
+                            <img src="images/Quiz_Logo.png" alt="" width="100" height="100"></div>
+                        <div class="details">
+                        <h2> Quiz App</h2>
+                        <p> Quiz App is a web application that helps you to improve your English skills. </p> </div>
+                     </div>
+                    
+                     <div class="options" >
+                         <div>
+                            <div class="option">
+                                <a href="#" style="margin-right:15px">Home </a>
+                            <a href="#">Rules</a>
+                            </div>
+                            <div class="right"></div>
+                                <button class = "btn btn-primary" onclick="location.href='quiz-page.html'" >Get Started</button>
+                            </div>
+                        </div>
+                </nav>
+            </div>
+        </header>
+       
+        <div class="info_box">
+            <div class="info-title"><span>Some Rules of this Quiz</span></div>
+            <div class="info-list">
+                <div class="info">1. You will have to read the given passage and answer the questions</div> 
+                <div class="info">2. You can use the navigation buttons to visit the previous question or the next question.</div>
+                <div class="info">3. You can't select too many options.</div>
+                <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+                <div class="info">5. You'll get points on the basis of your correct answers.</div>
+            </div>
+        </div>
+   
+        <a href="quiz-page.html">
+            <div class="start_btn">
+                <button onclick="get_username();">Get Started</button>
+                
+            </div>
+        </a>
+    </body>
+</html>
