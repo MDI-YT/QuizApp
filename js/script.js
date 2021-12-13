@@ -24,12 +24,9 @@ continue_btn.onclick = ()=>{
     showQuetions(0); //calling showQestions function
 }
 
-// let timeValue =  15;
 let que_count = 0;
 let que_numb = 1;
 let userScore = 0;
-let counter;
-let counterLine;
 let widthValue = 0;
 
 const restart_quiz = result_box.querySelector(".buttons .restart");
@@ -44,9 +41,6 @@ restart_quiz.onclick = ()=>{
     userScore = 0;
     widthValue = 0;
     showQuetions(que_count); //calling showQestions function
-    queCounter(que_numb); //passing que_numb value to queCounter
-    clearInterval(counter); //clear counter
-    clearInterval(counterLine); //clear counterLine
     next_btn.classList.remove("show"); //hide the next button
 }
 
@@ -64,13 +58,8 @@ next_btn.onclick = ()=>{
         que_count++; //increment the que_count value
         que_numb++; //increment the que_numb value
         showQuetions(que_count); //calling showQestions function
-        queCounter(que_numb); //passing que_numb value to queCounter
-        clearInterval(counter); //clear counter
-        clearInterval(counterLine); //clear counterLine
         next_btn.classList.remove("show"); //hide the next button
     }else{
-        clearInterval(counter); //clear counter
-        clearInterval(counterLine); //clear counterLine
         showResult(); //calling showResult function
     }
 }
@@ -101,8 +90,6 @@ let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 //if user clicked on option
 function optionSelected(answer){
-    clearInterval(counter); //clear counter
-    clearInterval(counterLine); //clear counterLine
     let userAns = answer.textContent; //getting user selected option
     let correcAns = questions[que_count].answer; //getting correct answer from array
     const allOptions = option_list.children.length; //getting all option items
