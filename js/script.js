@@ -41,26 +41,11 @@ restart_quiz.onclick = ()=>{
     userScore = 0;
     widthValue = 0;
     showQuetions(que_count); //calling showQestions function
-    next_btn.classList.remove("show"); //hide the next button
 }
 
 // if quitQuiz button clicked
 quit_quiz.onclick = ()=>{
     window.location.reload(); //reload the current window
-}
-
-
-
-
-// if Next Que button clicked
-next_btn.onclick = ()=>{
-    if(que_count < questions.length - 1){ //if question count is less than total question length
-        que_count++; //increment the que_count value
-        showQuetions(que_count); //calling showQestions function
-        next_btn.classList.remove("show"); //hide the next button
-    }else{
-        showResult(); //calling showResult function
-    }
 }
 
 // getting questions and options from array
@@ -97,16 +82,10 @@ function optionSelected(answer){
     }else{
         answer.classList.add("incorrect"); //adding red color to correct selected option
 
-        for(i=0; i < allOptions; i++){
-            if(option_list.children[i].textContent == correcAns){ //if there is an option which is matched to an array answer 
-                option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
-            }
-        }
     }
     for(i=0; i < allOptions; i++){
         option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
     }
-    next_btn.classList.add("show"); //show the next button if user selected any option
 }
 
 function showResult(){
